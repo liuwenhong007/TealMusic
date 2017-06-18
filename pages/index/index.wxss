@@ -1,0 +1,89 @@
+/**index.wxss**/
+
+.slider {
+  overflow: hidden;
+  margin-bottom: 28rpx;
+}
+
+.radio, .hot {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.list_normal {
+  margin-bottom: 14rpx;
+}
+
+.list_title {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+  margin-bottom: 22rpx;
+}
+
+.radio_wrapper, .songlist_wrapper {
+  overflow: hidden;
+  margin-right: -16rpx;
+}
+
+.radio_item {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 16rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+
+.item_main {
+  background-color: #fff;
+}
+
+.item_media {
+  position: relative;
+  margin-bottom: 2rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.item_info {
+  padding: 0 14rpx 10rpx;
+  background-color: #fff;
+  color: #000;
+}
+
+.item_tit {
+  font-size: 14px;
+}
+
+.item_tit, .list_text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
+}
+
+.list_normal .item_tit {
+  height: 72rpx;
+  line-height: 18px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.icon_play {
+  position: absolute;
+  z-index: 10;
+  height: 48rpx;
+  bottom: 18rpx;
+  right: 10rpx;
+  width: 48rpx;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 24px 60px;
+}
+
+.list_text {
+  font-size: 12px;
+}

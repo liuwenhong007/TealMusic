@@ -1,8 +1,13 @@
 const url = 'https://c.y.qq.com/'
+const url2 = 'https://api.weixin.qq.com'
 const fetch = require('./fetch')
 
 function fetchApi(types, api, option) {
   return fetch(url, types, api, option)
+}
+
+function axios(types, api, option) {
+  return fetch(url2, types, api, option)
 }
 
 module.exports = {
@@ -35,5 +40,11 @@ module.exports = {
    */
   getHotList(disstid) {
     return fetchApi('GET', `/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?disstid=${disstid}&format=json`).then(res => res.data)
+  },
+  /**
+   * 获取登录凭证
+   */
+  getLoginCode(APPID, SECRET, JSCODE) {
+    return axios('GET', `sns/jscode2session?appid=${APPID}&secret=${SECRET}&js_code=${JSCODE}&grant_type=`)
   }
 }

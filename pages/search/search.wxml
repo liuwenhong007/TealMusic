@@ -1,2 +1,22 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view hidden="{{shows ? false : true}}" class="search">
+  <view class="search_bar">
+    <view class="search_bar_cont">
+      <form>
+        <input focus="{{focus}}" bindfocus="bindGetfocus" type="text" class="search_input" placeholder-class="placeholder-class" placeholder="搜索歌曲、歌单、专辑"/>
+        <view class="search_icon"></view>
+        <view class=""></view>
+      </form>
+    </view>
+    <view hidden="{{show ? false : true}}" bindtap="bindtapcancel" class="search_bar_tip_text">取消</view>
+  </view>
+  <view hidden="{{show ? true : false}}" class="mod_search_result">
+    <text class="result_tit">热门搜索</text>
+    <view class="result_tags">
+      <view class="tag_s tag_hot">{{special_key}}</view>
+      <block wx:for="{{hotkey}}" wx:key="{{item.n}}">
+        <view class="tag_s">{{item.k}}</view>
+      </block>
+    </view>
+  </view>
+</view>

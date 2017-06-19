@@ -1,0 +1,35 @@
+/* pages/login/login.wxss */
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login_avator {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 1px solid #bfbfbf;
+  margin-top: 100rpx;
+}
+
+.avator_img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.user_name {
+  margin-top: 40rpx;
+  font-size: 16px;
+  color: #707070;
+}
+
+.login_btn {
+  margin-top: 100rpx;
+  width: 90%;
+  height: 80rpx;
+  background-color: #26a69a;
+  color: #fff;
+  font-size: 16px;
+}

@@ -1,0 +1,8 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+  <view class="login_avator">
+    <image class="avator_img" src="{{avatarUrl}}"></image>
+  </view>
+  <view class="user_name">{{nickName}}</view>
+  <button hover-start-time="20" hover-class="button-hover" bindtap="login" hover-stay-time="70" class="login_btn">使用微信账号登录</button>
+</view>

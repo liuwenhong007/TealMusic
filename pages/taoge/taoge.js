@@ -1,4 +1,4 @@
-// pages/ranking/ranking.js
+// pages/taoge/taoge.js
 const app = getApp()
 Page({
 
@@ -6,43 +6,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-    show: false
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.onLoadData()
+    
   },
   onLoadData() {
-    wx.showNavigationBarLoading()
-    app.api.getRankingList().then(res => {
-      console.log(res.data)
-      if (res.code === 0) {
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
+    app.api.getHotList().then(res => {
+      if(res.code === 0) {
         this.setData({
-          topList: res.data.topList,
-          show: true
+          
         })
         setTimeout(() => {
-          wx.hideNavigationBarLoading()
-        }, 800)
+          wx.hideLoading()
+        }, 500)
       }
     })
+    
   },
-  // onPullDownRefresh() {
-  //   console.log(1)
-  //   app.api.getRankingList().then(res => {
-  //     console.log(res.data)
-  //     if (res.code === 0) {
-  //       this.setData({
-  //         topList: res.data.topList,
-  //         show: true
-  //       })
-  //       wx.stopPullDownRefresh()
-  //     }
-  //   })
-  // },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

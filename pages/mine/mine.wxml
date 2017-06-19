@@ -1,2 +1,12 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="mine">
+  <view class="container">
+    <view class="login-con">
+      <view class="login" bindtap="{{flag ? 'bindQuit' : 'bindLogin'}}">
+        <image class="login_icon" src="/images/login.png"></image>
+        <text class="login_text">{{flag ? '退出' : '登录'}}</text>
+      </view>
+    </view>
+    <image class="avator" src="{{flag ? avatarUrl : '/images/qq.png'}}"></image>
+    <view class="username">{{flag ? nickName : '未登录'}}</view>
+  </view>
+</view>

@@ -1,5 +1,5 @@
 <!--pages/ranking/ranking.wxml-->
-<view class="contaniner">
+<view hidden="{{show ? false : true}}" class="contaniner">
   <view class="mod_topic">
     <block wx:for="{{topList}}" wx:key="{{item.id}}">
       <view class="topic_item">

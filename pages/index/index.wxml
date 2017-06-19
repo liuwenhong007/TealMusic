@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view hidden="{{show ? false : true}}" class="container">
   <!-- 轮播 start -->
   <view class="slider">
     <swiper indicator-dots="true" autoplay="true" interval="4000" duration="500" indicator-color="rgba(144,144,144,.8)" indicator-active-color="#fff">
@@ -33,8 +33,8 @@
   <view class="hot">
     <text class="list_title">热门歌单</text>
     <view class="songlist_wrapper">
-      <block wx:for="{{songList}}" wx:key="{{item.radioid}}">
-        <view class="radio_item">
+      <block wx:for="{{songList}}" wx:key="{{item.id}}">
+        <view class="radio_item" id="{{item.id}}" bindtap="bindTotaoge">
           <view class="item_main">
             <view class="item_media">
               <image src="{{item.picUrl}}" mode="widthFix"></image>

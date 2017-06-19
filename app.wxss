@@ -1,7 +1,7 @@
 view {
   font-family:Helvetica;
   font: 12px/1.5 "hiragino sans gb",arial,Helvetica;
-  background-color: #f4f4f4;
+  /*background-color: #f4f4f4;*/
 }
 page {
   background-color: #f4f4f4;

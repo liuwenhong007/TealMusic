@@ -1,4 +1,5 @@
 // pages/ranking/ranking.js
+const app = getApp()
 Page({
 
   /**
@@ -11,8 +12,15 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-  
+  onLoad(options) {
+    app.api.getRankingList().then(res => {
+      console.log(res.data)
+      if(res.code === 0) {
+        this.setData({
+          topList: res.data.topList
+        })
+      }
+    })
   },
 
   /**

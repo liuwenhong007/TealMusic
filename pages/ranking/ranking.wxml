@@ -1,2 +1,29 @@
 <!--pages/ranking/ranking.wxml-->
-<text>pages/ranking/ranking.wxml</text>
+<view class="contaniner">
+  <view class="mod_topic">
+    <block wx:for="{{topList}}" wx:key="{{item.id}}">
+      <view class="topic_item">
+        <view class="topic_main">
+          <view class="topic_media">
+            <image src="{{item.picUrl}}" mode="widthFix"></image>
+            <view class="listen_count">
+              <image class="listen-icon" src="/images/erji.png"></image>
+              {{item.listenCount / 10000}}万
+            </view>
+          </view>
+          <view class="topic_info">
+            <view class="topic_cont">
+              <text class="topic_tit">{{item.topTitle}}</text>
+              <view wx:for="{{item.songList}}" wx:for-index="idx" wx:key="idx" class="topic_text">
+                {{idx + 1}}
+                <text class="text_name">{{item.songname}}</text>
+                -  {{item.singername}}
+              </view>
+            </view>
+            <image class="topic_arrow" src="/images/right.png"></image>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

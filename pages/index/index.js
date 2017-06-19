@@ -7,8 +7,8 @@ Page({
   },
   onLoad(e) {
     app.api.getHomeList().then(res => {
-      console.log(res.data)
-      if(res.data !== null) {
+      // console.log(res.data)
+      if(res.code === 0) {
         this.setData({
           radioList: res.data.radioList,
           slider: res.data.slider,

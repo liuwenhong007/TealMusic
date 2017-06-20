@@ -28,7 +28,8 @@ Page({
     app.api.getHotList(id).then(res => {
       if (res.code === 0) {
         this.setData({
-          cdlist: res.cdlist[0]
+          cdlist: res.cdlist[0],
+          visitnum: (res.cdlist[0].visitnum / 10000).toFixed(1)
         })
 
         app.api.getBcColor(res.cdlist[0].logo).then(res => {

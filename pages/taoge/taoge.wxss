@@ -111,11 +111,22 @@
   flex-direction: column;
   justify-content: center;
   padding-right: 30rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .song_list__tit {
   font-size: 18px;
   font-weight: 400;
+}
+
+.song_list__tit,
+.song_list__desc {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .c_txt2 {

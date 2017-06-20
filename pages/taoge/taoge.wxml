@@ -7,7 +7,7 @@
         <view class="focus__text">
           <view class="focus__tit c_txt1">{{cdlist.dissname}}</view>
           <view class="focus__desc c_txt1">
-            <text class="focus__gap">{{cdlist.visitnum/10000}}万人播放</text>来自
+            <text class="focus__gap">{{visitnum}}万人播放</text>来自
             <text class="">{{cdlist.nick}}</text>
           </view>
         </view>
@@ -33,7 +33,7 @@
     <text class="c_txt1">标签</text>
   </view>
   <view class="mod_tag">
-    <text wx:for="{{cdlist.tags}}" class="tag__item c_txt1">{{item.name}}</text>
+    <text wx:for="{{cdlist.tags}}" wx:key="{{item.id}}" class="tag__item c_txt1">{{item.name}}</text>
   </view>
   <view class="mod_tit">
     <text class="c_txt1">简介</text>

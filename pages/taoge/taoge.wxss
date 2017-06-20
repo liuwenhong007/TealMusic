@@ -1,1 +1,174 @@
 /* pages/taoge/taoge.wxss */
+
+.taoge_nav {
+  position: relative;
+  overflow: hidden;
+}
+
+.focus__body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.focus__gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+.focus__gradient::after {
+  content: "";
+  display: block;
+  padding-top: 60%;
+}
+
+.focus__info {
+  display: flex;
+  align-items: center;
+  margin: 0 30rpx 50rpx;
+}
+
+.focus__desc, .focus__tit {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+
+.focus__text {
+  flex: 1;
+  max-width: 80%;
+}
+
+.focus__tit {
+  position: relative;
+  display: block;
+  height: 36px;
+  overflow: hidden;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.focus__gap {
+  margin-right: 10px;
+}
+
+.c_txt1 {
+  color: #fff;
+}
+
+.c_ico1 {
+  color: #fff;
+}
+
+.focus__play {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin-left: 10px;
+  border: solid 3px;
+  border-radius: 999px;
+}
+
+.focus__play::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 17px;
+  height: 0;
+  width: 0;
+  line-height: 999em;
+  overflow: hidden;
+  border-color: transparent transparent transparent currentColor;
+  border-width: 9px 15px;
+  border-style: solid;
+}
+
+.c_bor1, .c_bor1::after {
+  border-bottom: 1px solid;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.border_t {
+  position: relative;
+}
+
+.song_list__box {
+  display: flex;
+  height: 120rpx;
+  padding-left: 20rpx;
+}
+
+.song_list__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 30rpx;
+}
+
+.song_list__tit {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.c_txt2 {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mod_tit {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  margin: 50rpx 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.tag__item {
+  position: relative;
+  display: inline-block;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 30rpx;
+  margin: 0 10rpx 20rpx;
+  font-size: 14px;
+  transform: translate3d(0, 0, 0);
+}
+
+.mod_tag {
+  position: relative;
+  margin: 0 30rpx 30rpx;
+  text-align: center;
+  font-size: 0;
+}
+
+.tag__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.summary__para {
+  display: block;
+  margin: 0 30rpx;
+  padding-bottom: 80rpx;
+  text-align: justify;
+  font-size: 14px;
+}

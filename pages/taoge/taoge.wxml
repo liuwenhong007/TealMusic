@@ -1,2 +1,46 @@
 <!--pages/taoge/taoge.wxml-->
-<text>pages/taoge/taoge.wxml</text>
+<view hidden="{{show ? false : true}}" class="taoge" style="background-color: {{color}}">
+  <view class="taoge_nav">
+    <image class="logo" src="{{cdlist.logo}}" mode="widthFix"></image>
+    <view class="focus__body">
+      <view class="focus__info">
+        <view class="focus__text">
+          <view class="focus__tit c_txt1">{{cdlist.dissname}}</view>
+          <view class="focus__desc c_txt1">
+            <text class="focus__gap">{{cdlist.visitnum/10000}}万人播放</text>来自
+            <text class="">{{cdlist.nick}}</text>
+          </view>
+        </view>
+        <view class="focus__play c_ico1"></view>
+      </view>
+    </view>
+    <view class="focus__gradient" style="pointer-events: none;background-image: -webkit-linear-gradient(top, transparent, currentColor 80%);color: {{color}}"></view>
+  </view>
+  <!--  -->
+  <view class="mod_song_list border_t c_bor1">
+    <block wx:for="{{cdlist.songlist}}" wx:key="idx">
+      <view class="song_list__box">
+        <view class="song_list__body border_b c_bor1">
+          <text class="song_list__tit c_txt1">{{item.songname}}</text>
+          <text class="song_list__desc c_txt2">{{item.albumname}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+  <!--  -->
+  <view class="mod_tit">
+    <text class="c_txt1">标签</text>
+  </view>
+  <view class="mod_tag">
+    <text wx:for="{{cdlist.tags}}" class="tag__item c_txt1">{{item.name}}</text>
+  </view>
+  <view class="mod_tit">
+    <text class="c_txt1">简介</text>
+  </view>
+  <view class="mod_summary">
+    <text class="summary__para c_txt1">
+      {{cdlist.desc}}
+    </text>
+  </view> 
+</view>
